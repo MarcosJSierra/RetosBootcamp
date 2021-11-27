@@ -29,7 +29,7 @@ function processNumber(numberArray){
     Incrementar en uno da ${entero} + 1  = ${enteroPlus}
     por lo tanto e lresultado es [${newArray}]
     `);
-    return total;
+    return newArray;
 }
 /**
  * 
@@ -60,12 +60,12 @@ function validateRestrictions(numberArray){
     if(error){
         return [];
     }else{
-        processNumber(numberArray);
+        return(processNumber(numberArray));
     }
     
 }
 
-validateRestrictions([1,2,3])
-validateRestrictions([4,3,2,1])
+// validateRestrictions([1,2,3]))
+// validateRestrictions([4,3,2,1])
 // validateRestrictions([ 5, 3, -1, 8 ]);
 // validateRestrictions([0,3,2,1])
