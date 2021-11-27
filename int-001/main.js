@@ -68,5 +68,5 @@ function validateRestrictions(entryString){
     }
 
 }
-console.log(validateRestrictions("23"));
-console.log(validateRestrictions("2"));
+// console.log(validateRestrictions("23"));
+// console.log(validateRestrictions("2"));
