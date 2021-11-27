@@ -30,6 +30,7 @@ function stringToArray(entryString){
  * @param {String} entryString 
  */
 function stringProcessor(entryString){
+    console.log(`Entrada: digitos = "${entryString}"`)
     let entryArray = stringToArray(entryString);
     let finalArray = [];
     let tmpArray = [""];
@@ -44,7 +45,7 @@ function stringProcessor(entryString){
             tmpArray = [...finalArray];
         });
     }
-    console.log(finalArray);
+    console.log("Salida: ", finalArray);
     return finalArray
 }
 
