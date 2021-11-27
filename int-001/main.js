@@ -64,12 +64,9 @@ function validateRestrictions(entryString){
     if(error){
         return[];
     }else{
-        stringProcessor(entryString);
+        return stringProcessor(entryString);
     }
 
 }
-validateRestrictions("23");
-validateRestrictions("2");
-// validateRestrictions("23333");
-// validateRestrictions("20");
-// validateRestrictions("12");
+console.log(validateRestrictions("23"));
+console.log(validateRestrictions("2"));
