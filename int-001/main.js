@@ -1,5 +1,5 @@
 const stringValues = {
-    "1": ["", "b", ""],
+    "1": [""],
     "2": ["a", "b", "c"],
     "3": ["d", "e", "f"],
     "4": ["g", "h", "i"],
@@ -7,7 +7,8 @@ const stringValues = {
     "6": ["m", "n", "o"],
     "7": ["p", "q", "r", "s"],
     "8": ["t", "u", "v"],
-    "9": ["w", "x", "y", "z"]
+    "9": ["w", "x", "y", "z"],
+    "0": [" "]
 }
 
 /**
@@ -32,16 +33,20 @@ function stringProcessor(entryString){
     let entryArray = stringToArray(entryString);
     let finalArray = [];
     let tmpArray = [""];
-    entryArray.forEach(element => {
-        finalArray = [];
-        tmpArray.forEach(newString => {
-            stringValues[element].forEach(letter =>{
-                finalArray.push(newString+letter);
+    if(entryArray.length <= 4 && entryArray.length > 0){
+        entryArray.forEach(element => {
+            finalArray = [];
+            tmpArray.forEach(newString => {
+                stringValues[element].forEach(letter =>{
+                    finalArray.push(newString+letter);
+                });
             });
+            tmpArray = [...finalArray];
         });
-        tmpArray = [...finalArray];
-    });
+    }
     console.log(finalArray);
+    return finalArray
 }
 
-stringProcessor("3597");
+stringProcessor("23");
+stringProcessor("2");
