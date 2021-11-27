@@ -30,24 +30,46 @@ function stringToArray(entryString){
  * @param {String} entryString 
  */
 function stringProcessor(entryString){
-    console.log(`Entrada: digitos = "${entryString}"`)
+    console.log(`Entrada: digitos = "${entryString}"`);
     let entryArray = stringToArray(entryString);
     let finalArray = [];
     let tmpArray = [""];
-    if(entryArray.length <= 4 && entryArray.length > 0){
-        entryArray.forEach(element => {
-            finalArray = [];
-            tmpArray.forEach(newString => {
-                stringValues[element].forEach(letter =>{
-                    finalArray.push(newString+letter);
-                });
+    entryArray.forEach(element => {
+        finalArray = [];
+        tmpArray.forEach(newString => {
+            stringValues[element].forEach(letter =>{
+                finalArray.push(newString+letter);
             });
-            tmpArray = [...finalArray];
         });
-    }
+        tmpArray = [...finalArray];
+    });
     console.log("Salida: ", finalArray);
-    return finalArray
+    return finalArray;
 }
 
-stringProcessor("23");
-stringProcessor("2");
+/**
+ * 
+ * @param {String} entryString 
+ */
+function validateRestrictions(entryString){
+    let error = false;
+    if(entryString.length < 0 || entryString.length > 4){
+        error = true;
+        console.log("ERROR: el numero maximo de elementos aceptables es 4\n");
+    }
+    if(entryString.includes("1") || entryString.includes("*") || entryString.includes("0") || entryString.includes("#")){
+        error = true;
+        console.log("ERROR: La cadena no puede incluir los valores 1, 0, * ni #\n");
+    }
+    if(error){
+        return[];
+    }else{
+        stringProcessor(entryString);
+    }
+
+}
+validateRestrictions("23");
+validateRestrictions("2");
+// validateRestrictions("23333");
+// validateRestrictions("20");
+// validateRestrictions("12");
