@@ -14,3 +14,4 @@ No. | Carpeta | Reto | Descripción | Nombre Función Llamable
 No. | Carpeta | Reto | Descripción | Nombre Función Llamable
 ---|---|---|---|---
 1 | ./int-001 | Combinación de letras de un número de telefono | Se recibe una cadena de texto con números entre el 2 y el 9, un máximo de 4 números, y devuelve la combinación de letras que se puedne generar. | validateRestrictions(stringDeEntrada)
+3 | ./int-003 | Contenedor con más agua | La función recibe un arreglo de números y calcula, en un plano (a, ai), cual es el contenedor que podria contener mas agua. | main(numberArray)
