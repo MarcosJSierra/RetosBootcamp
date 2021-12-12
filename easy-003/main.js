@@ -33,7 +33,18 @@ function main(inputString){
     if(output){
         output = activeKey.length > 0 ? false : output;
     }
+    console.log(`Input: ${inputString}
+Output: ${output}`);
     return output;
 }
 
-// console.log(main("Esto es una prueba({[]})()[]"))
+// console.log(main("({[]})()[]"));
+// console.log(main("()"));
+// console.log(main("()[]{}"));
+// console.log(main("(]"));
+// console.log(main("([)]"));
+// console.log(main("{[]}"));
+main("{[]}");
+main("{");
+main("{[)");
+main("{}([])");
