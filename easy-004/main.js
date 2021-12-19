@@ -32,7 +32,7 @@ function main(inputString){
     }
     console.log(`Input: s = ${inputString}
 Output: ${letter["quantity"]}`);
-    return letter;
+    return letter["quantity"];
 }
 
 main("leetcode");
